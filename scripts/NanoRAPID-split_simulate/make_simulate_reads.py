@@ -32,27 +32,26 @@ def generate_reads(num_reads, structure, open_regions, read_length=400, mod_rati
     return [generate_read(structure, open_regions, read_length, mod_ratio) for _ in range(num_reads)]
 
 
-
-
-
 structure1_open_regions = generate_structure()
 structure2_open_regions = generate_structure()
 
+reads_counts = 1000
+
 # 生成结构1和结构2的reads
-structure1_reads = generate_reads(500, "Structure1", structure1_open_regions)
-structure2_reads = generate_reads(500, "Structure2", structure2_open_regions)
+structure1_reads = generate_reads(reads_counts, "Structure1", structure1_open_regions)
+structure2_reads = generate_reads(reads_counts, "Structure2", structure2_open_regions)
 
 print(f"#{structure1_open_regions}")
 print(f"#{structure2_open_regions}")
 positive_ratio= 0.02
-for n in range(500):
+for n in range(reads_counts):
     index = f'structure1_read_{n}'
     for i in range(400):
         if random.random() < positive_ratio:
             structure1_reads[n][i] = 1
         print(f'{index}\t{i}\t{structure1_reads[n][i]}')
         
-for n in range(500):
+for n in range(reads_counts):
     index = f'structure2_read_{n}'
     for i in range(400):
         if random.random() < positive_ratio:
