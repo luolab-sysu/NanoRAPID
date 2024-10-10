@@ -176,15 +176,14 @@ def write_npy():
 outdir = sys.argv[1]
 motif =sys.argv[2]
 #---------
-embed_file="/disk1/work/zehui/index/data/embed.txt"
+embed_file="../NanoRAPID_CNN_train/embed.txt"
 embed_motif_dic = get_embed_index_dict(embed_file)
 #----------
-filter_file = "/disk1/work/zehui/gpu_public/public_data_result/NBT_PORE-cupine-ONT_result/model/PORE-cupine-SVM/split_data/pos_site.txt"
+filter_file = "ocSVM_pos_site.txt"
 select_dic = pos_get_filter(filter_file)
 #----------
-wd = "/disk1/work/zehui/gpu_public/public_data_result/NBT_PORE-cupine-ONT_result/model/rawsignal_train/data"
-ctrl_path = f"{wd}/unmod/motif_single_rawsignal/unmod_train"
-test_path = f"{wd}/mod/motif_single_rawsignal/mod"
+ctrl_path = f"./motif_rawsignal/unmod_train"
+test_path = f"./motif_rawsignal/mod"
 test_extra_file = f'{test_path}_{motif}_extra.txt'
 ctrl_extra_file = f'{ctrl_path}_{motif}_extra.txt'
 out_name_list = merge_ctrl_test(test_extra_file, ctrl_extra_file)

@@ -3,7 +3,7 @@ list=$2
 gpu1=${3:-2}
 gpu2=$(($gpu1+1))
 
-code=/disk1/work/zehui/gpu_public/public_data_result/NBT_PORE-cupine-ONT_result/model/rawsignal_train/result/denoise/code/split_data_train
+code=/NanoRAPID/scripts/NanoRAPID_CNN_denoise/split_data_train
 
 # 检查 $wd 变量是否已设置
 if [ -z $wd ] || [ -z $list ]; then
