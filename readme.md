@@ -42,7 +42,7 @@ NanoRAPID is a deep learning framework designed for direct RNA structure profili
 ##### Step 1. DRS-basecall-mapping
 
 ```
-./basecaller.sh /path/to/my_project 0
+./basecaller.sh /path/to/my_project gpu
 
 # 
 ./mapping.sh  /path/to/my_project  /path/to/reference
@@ -55,7 +55,7 @@ eventalign.sh  /path/to/my_project  /path/to/reference
   * **Purpose:** This step takes the raw electrical signal data (often FAST5 files) and converts it into DNA/RNA sequences (FASTQ files). This process is called ​**basecalling**​.
   * **Arguments:**
     * `/path/to/my_project`: The directory containing the raw sequencing data.
-    * `0`: Likely specifies the **GPU ID** to use for accelerated basecalling.
+    * `gpu`: Specifies the **GPU ID** to use for accelerated basecalling.
 * **`./mapping.sh /path/to/my_project /path/to/reference`**
   * **Purpose:** This step aligns the newly generated basecalled reads to a ​**reference genome/transcriptome**​. This produces an alignment file, typically in BAM format.
   * **Arguments:**
