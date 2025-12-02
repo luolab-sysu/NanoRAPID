@@ -5,7 +5,7 @@ set -e
 wd=$1
 py=rawsignal_extra_singlemotif.py
 data=$wd/data
-code=codepath
+code=./DRS-Features
 fa=reference
 
 # 检查 $wd 变量是否已设置
