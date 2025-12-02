@@ -11,7 +11,7 @@ check_program "nanopolish"
 
 wd="$1"
 data="$wd/data"
-fa="/disk2/work/zehui/NBT_ONT_result/Tetra_test/ref/ribosomal_RNA_self-splicing_intron.fa"
+fa="$2"
 # 检查参数是否为空
 if [ -z $wd ] && [ -z $fa ]; then
     echo "missing argvs" # 打印错误信息
