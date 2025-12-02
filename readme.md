@@ -69,6 +69,13 @@ eventalign.sh  /path/to/my_project  /path/to/reference
 
 ##### Step 2.  Extract Features
 
+```
+./rawsignal_to_features_cmd.sh /path/to/my_project /path/to/reference
+```
+  * **Arguments:**
+    * `/path/to/my_project`: The directory containing the raw data and/or alignment files.
+    * `/path/to/reference`: The path to the reference sequence file (e.g., FASTA file).
+
 ##### Step 3.  NanoRAPID Predict
 
 ```
