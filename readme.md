@@ -79,13 +79,14 @@ eventalign.sh  /path/to/my_project  /path/to/reference
 ##### Step 3.  NanoRAPID Predict
 
 ```
-python -u NanoRAPID-predict.py -d {motif} -m {motif_model_50.pth.tar} -g {gpu} -o ${motif_predict}
+python -u NanoRAPID-predict.py -d {motif} -m {motif_model.pth.tar} -g {gpu} -o ${motif_predict}
 ```
 
--d {motif} Specify the RNA motif (sequence context) to analyze
--m {motif\_model\_50.pth.tar} Path to the pre-trained deep learning model for modification prediction
--g {gpu}  Specify the GPU ID to use for accelerated computation (e.g., 0, 1)
--o \${motif\_predict} Define the output file or directory path for the prediction results
+  * **Arguments:**
+    * `-d {motif}`: Specify the RNA motif sequence context to analyze
+    * `-m {motif_model.pth.tar}`: Path to the pre-trained deep learning model for modification prediction
+    * `-g {gpu}`:  Specify the GPU ID to use for accelerated computation (e.g., 0, 1)
+    * `-o ${motif_predict}`: Define the output file or directory path for the prediction results
 
 ---
 
